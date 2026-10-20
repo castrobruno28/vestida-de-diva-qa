@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vestida de Diva — moda feminina para todos os momentos.">
+  <title>Vestida de Diva | Moda feminina</title>
+  <link rel="icon" href="./assets/vestida-de-diva.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/app.js" defer></script>
+</head>
+<body>
+  <div class="announcement"><span>VESTIDA DE DIVA</span><span>Moda para a mulher que escolhe ser inesquecível</span><span>Novidades da semana ✦</span></div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Vestida de Diva - página inicial">
+      <img class="brand-logo" src="./assets/vestida de diva.jpeg" alt="Vestida de Diva — Moda feminina">
+    </a>
+    <form class="search" id="search-form" role="search">
+      <label class="sr-only" for="search-input">Buscar produtos</label>
+      <input id="search-input" type="search" placeholder="O que você está procurando?" autocomplete="off">
+      <button type="submit" aria-label="Buscar">⌕</button>
+    </form>
+    <button class="cart-button" id="open-cart" type="button" aria-label="Abrir carrinho">
+      🛍 Carrinho <span id="cart-count" class="cart-count">0</span>
+    </button>
+  </header>
+
+  <nav class="main-nav" aria-label="Categorias">
+    <a href="#produtos" data-category="Todas">Todos</a>
+    <a href="#produtos" data-category="Vestidos">Vestidos</a>
+    <a href="#produtos" data-category="Blusas">Blusas</a>
+    <a href="#produtos" data-category="Calças">Calças</a>
+    <a href="#produtos" data-category="Saias">Saias</a>
+    <a href="#produtos" data-category="Conjuntos">Conjuntos</a>
+    <a href="#sobre">Sobre a loja</a>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">NOVA COLEÇÃO · 2026</p>
+        <h1>Vista a mulher<br>que você <em>é.</em></h1>
+        <p>Peças que acompanham sua presença. Cores que contam sua história. O look certo muda como você chega — e como você se sente.</p>
+        <a class="primary-button" href="#produtos">ENCONTRE SEU LOOK <span aria-hidden="true">↗</span></a>
+        <div class="hero-note"><span class="hero-note-line"></span><span>FEITA PARA VOCÊ. ESCOLHIDA POR VOCÊ.</span></div>
+      </div>
+      <div class="hero-art hero-photo">
+        <img class="hero-main-photo" src="./assets/vestido-azul-longo.png" alt="Modelo usando vestido azul longo da Vestida de Diva">
+        <div class="hero-photo-small"><img src="./assets/vestido-lilas-curto.png" alt="Vestido lilás da coleção"><span>O seu próximo<br><strong>favorito.</strong></span></div>
+        <div class="hero-roundel">VD<span>VESTIDA<br>DE DIVA</span></div>
+        <div class="hero-photo-label">COLEÇÃO <b>01</b> / MODA FEMININA</div>
+      </div>
+      <div class="hero-bottom-note"><span>01 — ELEGÂNCIA SEM ESFORÇO</span><span>DESCUBRA A COLEÇÃO ↓</span></div>
+    </section>
+    <section class="benefits" aria-label="Benefícios da loja">
+      <div><span class="benefit-icon">01</span><p><strong>Seu estilo em primeiro lugar</strong><small>Peças escolhidas para expressar quem você é</small></p></div>
+      <div><span class="benefit-icon">02</span><p><strong>Do casual ao inesquecível</strong><small>Inspiração para os seus vários momentos</small></p></div>
+      <div><span class="benefit-icon">03</span><p><strong>Uma experiência sem complicação</strong><small>Encontre, escolha e monte seu look</small></p></div>
+    </section>
+
+    <section class="products-section" id="produtos">
+      <div class="section-heading">
+        <div><p class="eyebrow">A SELEÇÃO VESTIDA DE DIVA</p><h2>Peças que fazem você se olhar duas vezes.</h2><p class="section-subtitle">Descubra os modelos que podem virar os seus novos favoritos.</p></div>
+        <div class="filters">
+          <label class="sr-only" for="category-filter">Filtrar por categoria</label>
+          <select id="category-filter">
+            <option value="Todas">Todas as categorias</option>
+            <option value="Vestidos">Vestidos</option>
+            <option value="Blusas">Blusas</option>
+            <option value="Calças">Calças</option>
+            <option value="Saias">Saias</option>
+            <option value="Conjuntos">Conjuntos</option>
+          </select>
+          <label class="sr-only" for="sort-filter">Ordenar produtos</label>
+          <select id="sort-filter">
+            <option value="featured">Mais relevantes</option>
+            <option value="price-asc">Menor preço</option>
+            <option value="price-desc">Maior preço</option>
+            <option value="name">Nome A–Z</option>
+          </select>
+        </div>
+      </div>
+      <p id="results-message" class="results-message" aria-live="polite"></p>
+      <div class="product-grid" id="product-grid"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <strong>Nenhum produto encontrado.</strong>
+        <p>Tente outra busca ou escolha uma categoria diferente.</p>
+        <button class="secondary-button" id="clear-filters" type="button">Limpar filtros</button>
+      </div>
+    </section>
+
+    <section class="promo-banner">
+      <div><p class="eyebrow">UM CONVITE PARA SE REINVENTAR</p><h2>Não é só roupa. É como você se sente.</h2><p>Escolha a peça, imagine as possibilidades e encontre seu próximo look favorito.</p></div>
+      <a class="light-button" href="#produtos">VER PRODUTOS</a>
+    </section>
+
+    <section class="about" id="sobre">
+      <div class="about-mark"><img class="about-logo" src="./assets/vestida de diva.jpeg" alt="Logomarca original da Vestida de Diva"></div>
+      <div><p class="eyebrow">A ESSÊNCIA DA MARCA</p><h2>Vista-se de confiança.</h2>
+        <p>A Vestida de Diva nasceu para mulheres que sabem que se vestir vai muito além da moda: é uma forma de expressão, confiança e poder. Cada peça é escolhida com cuidado para valorizar a beleza, a atitude e a personalidade de quem usa.</p>
+        <p><strong>Nossa missão:</strong> valorizar a beleza, a confiança e a autenticidade de cada mulher por meio da moda, oferecendo peças que unem elegância, qualidade e atitude.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="footer-brand" href="#">Vestida de Diva</a><p>Vitrine digital em desenvolvimento. Consulte a loja para confirmar disponibilidade, tamanhos e cores.</p><small>© <span id="year"></span> Vestida de Diva • Projeto de portfólio</small></footer>
+
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-modal="true" role="dialog" hidden>
+    <div class="drawer-header"><div><p class="eyebrow">SUA SACOLA</p><h2 id="cart-title">Carrinho</h2></div><button class="icon-button" id="close-cart" type="button" aria-label="Fechar carrinho">×</button></div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-footer"><div class="cart-total"><span>Subtotal</span><strong id="cart-total">R$ 0,00</strong></div><p class="shipping-note">Frete não calculado neste protótipo.</p><button class="primary-button checkout-button" id="checkout-button" type="button">CONTINUAR COMPRA</button><p class="demo-note">Checkout demonstrativo: nenhuma cobrança será realizada.</p></div>
+  </aside>
+
+  <dialog id="product-dialog" class="product-dialog">
+    <button class="icon-button dialog-close" id="close-product-dialog" type="button" aria-label="Fechar detalhes">×</button>
+    <div id="product-detail"></div>
+  </dialog>
+
+  <dialog id="checkout-dialog" class="checkout-dialog">
+    <button class="icon-button dialog-close" id="close-checkout-dialog" type="button" aria-label="Fechar finalização">×</button>
+    <p class="eyebrow">ÚLTIMA ETAPA</p><h2>Finalizar pedido demonstrativo</h2>
+    <p class="demo-note">Não informe dados reais de pagamento. Este protótipo não processa compras.</p>
+    <form id="checkout-form" novalidate>
+      <label for="customer-name">Nome completo</label><input id="customer-name" name="customerName" autocomplete="name" required>
+      <label for="customer-email">E-mail</label><input id="customer-email" name="customerEmail" type="email" autocomplete="email" required>
+      <label for="customer-cep">CEP (opcional)</label><input id="customer-cep" name="cep" inputmode="numeric" placeholder="00000-000">
+      <p id="checkout-error" class="form-error" aria-live="polite"></p>
+      <button class="primary-button checkout-button" type="submit">VALIDAR PEDIDO</button>
+    </form>
+    <div id="checkout-success" class="success-message" hidden></div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

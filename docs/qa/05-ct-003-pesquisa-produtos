@@ -1,0 +1,27 @@
+CT-003 — Pesquisa de Produtos
+
+ID: CT-003
+
+Funcionalidade: Pesquisa de produtos
+
+Objetivo: Verificar se a pesquisa permite localizar produtos pelo nome.
+
+Pré-condições:
+- O site Vestida de Diva está disponível para teste.
+- O catálogo de produtos está acessível.
+
+Passos:
+1. Acessar o catálogo.
+2. Localizar o campo de pesquisa.
+3. Digitar o nome de um produto que esteja cadastrado.
+4. Observar os resultados apresentados.
+
+Resultado esperado:
+O catálogo deve apresentar o produto correspondente ao termo pesquisado.
+
+Resultado obtido:
+A pesquisa de produtos foi executada e apresentou o comportamento esperado durante o teste.
+
+Status: Aprovado.
+
+Evidência: Captura de tela da pesquisa com o produto encontrado, identificada como `CT-003.png`.
